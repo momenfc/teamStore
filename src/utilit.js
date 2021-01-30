@@ -49,12 +49,13 @@ export const menuToggle = () => {
   const menuToggle = document.getElementById("menu-toggle");
   menuToggle.addEventListener("click", () => {
     document.querySelector(".nav").classList.toggle("active");
-    document.querySelector(".menu-toggle span").classList.toggle("close");
+    document.querySelector(".menu-toggle span").classList.add("close");
   });
   // EVENT LESTENER TO NAV
   document.querySelector(".nav").addEventListener("click", (e) => {
     if (e.target.classList.contains("nav__link")) {
       document.querySelector(".nav").classList.remove("active");
+      document.querySelector(".menu-toggle span").classList.remove("close");
     }
   });
 };
