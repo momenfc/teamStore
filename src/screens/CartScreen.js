@@ -88,7 +88,7 @@ const CartScreen = {
         />
       </div>
       <div class="cart__info">
-        <a href=`/#/product/${item.product}` class="cart__link"
+        <a href="/#/product/${item.product}" class="cart__link"
           >${item.title}</a
         >
         <p class="cart__price">$${item.price}</p>
