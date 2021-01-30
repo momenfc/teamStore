@@ -1,0 +1,17 @@
+.footer {
+  background-color: $color-gray-light;
+  grid-area: "footer";
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $color-gray-dark-1;
+  padding: 2rem;
+  cursor: default;
+  span {
+    letter-spacing: 1px;
+    transition: all 0.2s;
+  }
+  span:hover {
+    color: $color-primary-dark;
+  }
+}

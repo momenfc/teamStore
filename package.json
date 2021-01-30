@@ -1,0 +1,20 @@
+{
+  "name": "team-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "live-server": "^1.2.1",
+    "uninstall": "0.0.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1"
+  },
+  "scripts": {
+    "start": "live-server --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

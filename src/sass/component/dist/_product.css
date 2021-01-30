@@ -1,0 +1,20 @@
+.product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product__img-box {
+  flex: 1 1 25rem;
+  padding: 4rem;
+}
+.product__img {
+  width: 100%;
+}
+.product__details {
+  padding: 4rem;
+  flex: 1 1 60rem;
+}
+.product__category {
+  font-size: 1.6rem;
+  font-weight: 600;
+}

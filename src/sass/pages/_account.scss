@@ -1,0 +1,56 @@
+.card {
+  max-width: 40rem;
+  width: 100%;
+
+  margin: 8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid $color-gray-light-1;
+  border-radius: 5px;
+
+  &__header {
+    font-size: 2.8rem;
+    margin: 2rem 0;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    color: #1613db;
+  }
+}
+
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  &__label {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: $color-gray-dark;
+    margin-bottom: 0.3rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    border: 1px solid $color-gray-dark-1;
+    border-radius: 5px;
+    font-size: 1.6rem;
+
+    &:focus {
+      border: 1px solid transparent;
+      outline: 2px solid $color-gray-dark;
+    }
+  }
+}

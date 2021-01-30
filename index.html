@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/sass/all.min.css" />
+    <link rel="stylesheet" href="/src/sass/main.css" />
+    <title>Team Store</title>
+  </head>
+  <body>
+    <div class="overlay" id="loading-overlay">
+      <span class="spinner"></span>
+    </div>
+    <div class="container-grid">
+      <!-- NAVBAR -->
+      <div class="navbar">
+        <div class="container flex">
+          <a href="/#/" class="brand"> teamStore </a>
+          <button class="cart-btn">
+            <a href="/#/cart"><i class="fas fa-shopping-cart"></i></a>
+            <span class="cart-btn__navigation"></span>
+          </button>
+
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="/#/" class="nav__link">home</a>
+            </li>
+            <li class="nav__item">
+              <a href="/#/products" class="nav__link">products</a>
+            </li>
+            <li class="nav__item">
+              <a href="/#/signin" class="nav__link">sign_in</a>
+            </li>
+          </ul>
+
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <section class="slider">
+        <button id="arr-left" class="slider__arrow">
+          <i class="fas fa-arrow-circle-left"></i>
+        </button>
+        <div class="slider__img-box"></div>
+        <button id="arr-right" class="slider__arrow">
+          <i class="fas fa-arrow-circle-right"></i>
+        </button>
+      </section>
+
+      <main class="my-m" id="main"></main>
+
+      <footer class="footer">
+        &copy;copyright 2021 by <span>Momen Nasser</span>
+      </footer>
+    </div>
+
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>

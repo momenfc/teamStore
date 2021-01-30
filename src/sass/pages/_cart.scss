@@ -1,0 +1,127 @@
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+
+  &__text--empty {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 2rem 0;
+
+    a {
+      color: $color-primary-dark;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        color: $color-primary-light;
+      }
+    }
+  }
+
+  ////////////////////
+  &__content {
+    flex: 1 1 65%;
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    &:not(:first-child) {
+      min-height: 15rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__price {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__img-box {
+    flex: 1 1 20%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__info {
+    flex: 1 1 80%;
+    margin-left: 3rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  &__link {
+    flex: 1 1 65%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-right: auto;
+  }
+
+  &__price {
+    flex: 1 1 30%;
+    text-align: right;
+  }
+
+  &__qty {
+    margin-right: 1rem;
+    display: flex;
+    &__select {
+      margin-left: 0.5rem;
+      width: 6rem;
+      height: 2.5rem;
+      font-size: inherit;
+      padding-left: 1rem;
+      border: 1px solid $color-gray-light-1;
+
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $color-primary-light;
+      }
+    }
+  }
+
+  &__delete-btn {
+    padding: 0 1rem;
+    background: unset;
+    outline: none;
+    border: 1px solid $color-gray-light-1;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $color-primary-dark;
+      color: $color-gray-light;
+    }
+  }
+
+  ////////////////////////////
+  &__checkout {
+    flex: 1 1 35%;
+    min-width: 28rem;
+    padding: 0 3rem; // text-align: center;
+    h4 {
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+  }
+}

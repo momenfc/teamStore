@@ -1,0 +1,177 @@
+.navbar {
+  background-color: $color-gray-light;
+  position: relative;
+  // display: flex;
+  // align-items: center;
+  // height: ;
+}
+
+.brand {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $color-primary;
+  margin-right: auto;
+  // margin: 2rem auto 2rem 0;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(medium-screen) {
+    background-color: rgba(16, 16, 16, 0.9);
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 8rem 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+      @include respond(medium-screen) {
+        margin-right: auto;
+      }
+    }
+    @include respond(medium-screen) {
+      margin: 1.5rem auto;
+    }
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: $color-gray-dark-1;
+    transition: all 0.2s ease-out;
+
+    @include respond(medium-screen) {
+      color: #fff;
+      font-size: 2.2rem;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+}
+
+.cart-btn {
+  border: none;
+  font-size: 2.2rem;
+  color: #5bae32;
+  padding: 0 4rem;
+  background-color: unset;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  a {
+    color: #5bae32;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__navigation {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background-color: $color-primary-light;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8rem;
+    position: absolute;
+    top: -1rem;
+    right: 2.5rem;
+  }
+}
+
+//////////////////////////
+// MENU TOGGLE BUTTON
+
+.menu-toggle {
+  display: none;
+  padding: 1rem;
+  background-color: unset;
+  border: none;
+  outline: none;
+  z-index: 200;
+  cursor: pointer;
+
+  @include respond(medium-screen) {
+    display: block;
+  }
+
+  span {
+    position: relative;
+    color: $color-gray-light;
+    color: $color-primary-light;
+    transform: translateY(-3px);
+  }
+  span::after,
+  span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  span,
+  span::after,
+  span::before {
+    display: inline-block;
+    width: 3.5rem;
+    height: 0.4rem;
+    background-color: $color-gray-light;
+    background-color: currentColor;
+    transition: transform 0.3s linear;
+  }
+
+  span::after {
+    top: -0.9rem;
+    transform: rotate(180deg);
+  }
+  span::before {
+    top: 0.9rem;
+    transform: rotate(180deg);
+  }
+
+  & .close {
+    width: 0;
+    &::after {
+      top: 0;
+      transform: rotate(-225deg);
+    }
+    &::before {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:hover .close {
+    width: 0;
+    &::after {
+      top: 0;
+    }
+    &::before {
+      top: 0;
+    }
+  }
+}

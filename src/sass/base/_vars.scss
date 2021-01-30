@@ -1,0 +1,22 @@
+// COLOR VARS
+$color-primary: #f97c25;
+$color-primary-light: #f7a12e;
+$color-primary-dark: #fa6720;
+$color-gray-light: #f8f8f8;
+$color-gray-light-1: #aaaaaa;
+$color-gray-dark: #333333;
+$color-gray-dark-1: #707070;
+
+// PREAKPOINT VARS
+// $big-Screen: 50em; //1200px
+$medium-screen: 50em; //800px
+// $small-Screen: 50em; //800px
+// $medium-Screen: 50em; //800px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == medium-screen {
+    @media only screen and (max-width: $medium-screen) {
+      @content;
+    }
+  }
+}
