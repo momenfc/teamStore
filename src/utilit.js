@@ -49,7 +49,7 @@ export const menuToggle = () => {
   const menuToggle = document.getElementById("menu-toggle");
   menuToggle.addEventListener("click", () => {
     document.querySelector(".nav").classList.toggle("active");
-    document.querySelector(".menu-toggle span").classList.add("close");
+    document.querySelector(".menu-toggle span").classList.toggle("close");
   });
   // EVENT LESTENER TO NAV
   document.querySelector(".nav").addEventListener("click", (e) => {
