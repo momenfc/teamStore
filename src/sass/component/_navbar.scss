@@ -154,7 +154,8 @@
   }
 
   & .close {
-    width: 0;
+    background-color: transparent;
+    transition: all 0.2s;
     &::after {
       top: 0;
       transform: rotate(-225deg);
@@ -166,7 +167,6 @@
   }
 
   &:hover .close {
-    width: 0;
     &::after {
       top: 0;
     }

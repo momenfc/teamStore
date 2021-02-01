@@ -11,9 +11,10 @@ const HomeScreen = {
       "img-slide-5.jpg",
     ];
     let i = 0;
-    const sliderImg = document.querySelector(".slider__img-box");
-    const slideLeftBtn = document.getElementById("arr-left"),
+    const sliderImg = document.querySelector(".slider__img-box"),
+      slideLeftBtn = document.getElementById("arr-left"),
       slideRightBtn = document.getElementById("arr-right");
+
     slideRightBtn.addEventListener("click", () => {
       i++;
       if (i > images.length - 1) {
@@ -21,6 +22,7 @@ const HomeScreen = {
       }
       sliderImg.style.backgroundImage = `url(../../../images/${images[i]})`;
     });
+
     slideLeftBtn.addEventListener("click", () => {
       i--;
       if (i < 0) {

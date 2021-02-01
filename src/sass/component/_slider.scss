@@ -12,13 +12,17 @@
   }
 
   &__img-box {
+    border: 1px solid $color-gray-light-1;
     height: 35vh;
     width: 100%;
     background-image: url(../../../images/img-slide-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 1s ease-out;
+    transition: background-image 0.5s linear;
+    border-radius: 0 0 2rem 2rem;
+    overflow: hidden;
+    border: 1px solid $color-gray-light-1;
   }
 
   &__arrow {
