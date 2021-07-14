@@ -27,14 +27,13 @@ a {
 .container-grid {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: min-content min-content 1fr min-content;
+  grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr;
 }
 
 .container {
   max-width: 110rem;
   margin: 0 auto;
-  overflow: auto;
 }
 
 .flex {

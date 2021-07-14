@@ -1,39 +1,7 @@
 import { hideLoading, showLoading } from "../utilit.js";
 
 const HomeScreen = {
-  after_render: () => {
-    const time = 6000;
-    const images = [
-      "img-slide-1.jpg",
-      "img-slide-2.jpg",
-      "img-slide-3.jpg",
-      "img-slide-4.jpg",
-      "img-slide-5.jpg",
-    ];
-    let i = 0;
-    const sliderImg = document.querySelector(".slider__img-box"),
-      slideLeftBtn = document.getElementById("arr-left"),
-      slideRightBtn = document.getElementById("arr-right");
-
-    slideRightBtn.addEventListener("click", () => {
-      i++;
-      if (i > images.length - 1) {
-        i = 0;
-      }
-      sliderImg.style.backgroundImage = `url(../../../images/${images[i]})`;
-    });
-
-    slideLeftBtn.addEventListener("click", () => {
-      i--;
-      if (i < 0) {
-        i = images.length - 1;
-      }
-      sliderImg.style.backgroundImage = `url(../../../images/${images[i]})`;
-    });
-    setInterval(() => {
-      slideRightBtn.click();
-    }, time);
-  },
+  after_render: () => {},
   render: async () => {
     showLoading();
     const respons = await fetch("https://fakestoreapi.com/products", {
@@ -48,6 +16,8 @@ const HomeScreen = {
 
     return `
       <div class="container">
+      <h2 class="heading-2 center">all products</h2>
+      <div class="underline"></div>
         <div class="products">
           ${products
             .map(

@@ -9,7 +9,7 @@ import {
   hideLoading,
   menuToggle,
   parseRequestUrl,
-  slidShow,
+  // slidShow,
   setCartBtnNavi,
   showLoading,
 } from "./utilit.js";
@@ -33,14 +33,6 @@ const route = async () => {
     (request.id ? "/:id" : "") +
     (request.action ? `/${request.action}` : "");
   const screen = routes[parseUrl] ? routes[parseUrl] : ErrorScreen404;
-  slidShow();
-  // const slider = document.querySelector(".slider");
-  // if (screen != HomeScreen) {
-  //   slider.style.display = "none";
-  // } else {
-  //   slider.style.display = "flex";
-  // }
-  // resetEle();
   const main = document.getElementById("main");
   main.innerHTML = await screen.render();
   screen.after_render();
@@ -51,3 +43,62 @@ const route = async () => {
 window.addEventListener("load", route);
 window.addEventListener("hashchange", route);
 menuToggle();
+
+// SLIDER FUNCTIONS
+const slides = document.querySelectorAll(".slider .box-img"),
+  boxImgs = document.querySelector(".container-imgs"),
+  btnPrev = document.querySelector(".prev-slide"),
+  btnNext = document.querySelector(".next-slide"),
+  bultsBox = document.querySelector(".ctrl-bults");
+
+//
+let currentSlide = 0;
+
+const initSlide = function () {
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
+  });
+};
+
+function goNext() {
+  if (currentSlide === slides.length - 1) currentSlide = 0;
+  else currentSlide++;
+
+  init();
+}
+btnNext.addEventListener("click", goNext);
+
+btnPrev.addEventListener("click", function () {
+  if (currentSlide === 0) currentSlide = slides.length - 1;
+  else currentSlide--;
+
+  init();
+});
+
+const createBults = function (slides) {
+  bultsBox.innerHTML = "";
+  slides.forEach((_, i) => {
+    bultsBox.insertAdjacentHTML(
+      "beforeend",
+      `<span class="" data-slide="${i}"><i class="dot far ${
+        i === currentSlide ? "fa-dot-circle active-dot" : "fa-circle"
+      }"></i></span>`
+    );
+  });
+};
+
+bultsBox.addEventListener("click", function (e) {
+  if (e.target.classList.contains("dot")) {
+    const btn = e.target.closest("span");
+    currentSlide = +btn.dataset.slide;
+  }
+  init();
+});
+
+const init = function () {
+  initSlide();
+  createBults(slides);
+};
+init();
+
+const autoSlide = setInterval(goNext, 7000);

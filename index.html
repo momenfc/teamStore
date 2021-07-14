@@ -9,42 +9,42 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/sass/all.min.css" />
-    <link rel="stylesheet" href="/src/sass/main.css" />
+    <link rel="stylesheet" href="/src/css/main.css" />
     <title>Team Store</title>
   </head>
   <body>
     <div class="overlay" id="loading-overlay">
       <span class="spinner"></span>
     </div>
-    <div class="container-grid">
-      <!-- NAVBAR -->
-      <div class="navbar">
-        <div class="container flex">
-          <a href="/#/" class="brand"> teamStore </a>
-          <button class="cart-btn">
-            <a href="/#/cart"><i class="fas fa-shopping-cart"></i></a>
-            <span class="cart-btn__navigation"></span>
-          </button>
+    <!-- <div class="container-grid"> -->
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="container flex">
+        <a href="/#/" class="brand"> teamStore </a>
+        <button class="cart-btn">
+          <a href="/#/cart"><i class="fas fa-shopping-cart"></i></a>
+          <span class="cart-btn__navigation"></span>
+        </button>
 
-          <ul class="nav">
-            <li class="nav__item">
-              <a href="/#/" class="nav__link">home</a>
-            </li>
-            <li class="nav__item">
-              <a href="/#/products" class="nav__link">products</a>
-            </li>
-            <li class="nav__item">
-              <a href="/#/signin" class="nav__link">sign_in</a>
-            </li>
-          </ul>
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="/#/" class="nav__link">home</a>
+          </li>
+          <li class="nav__item">
+            <a href="/#/products" class="nav__link">products</a>
+          </li>
+          <li class="nav__item">
+            <a href="/#/signin" class="nav__link">sign_in</a>
+          </li>
+        </ul>
 
-          <button class="menu-toggle" id="menu-toggle">
-            <span></span>
-          </button>
-        </div>
+        <button class="menu-toggle" id="menu-toggle">
+          <span></span>
+        </button>
       </div>
+    </div>
 
-      <section class="slider">
+    <!-- <section class="slider">
         <button id="arr-left" class="slider__arrow">
           <i class="fas fa-arrow-circle-left"></i>
         </button>
@@ -52,14 +52,44 @@
         <button id="arr-right" class="slider__arrow">
           <i class="fas fa-arrow-circle-right"></i>
         </button>
-      </section>
+      </section> -->
 
-      <main class="my-m" id="main"></main>
+    <!-- slider -->
+    <section class="sec-slider">
+      <div class="slider">
+        <div class="box-img">
+          <img src="images/img-slide-1.jpg" alt="" class="img" />
+        </div>
+        <div class="box-img">
+          <img src="images/img-slide-2.jpg" alt="" class="img" />
+        </div>
+        <div class="box-img">
+          <img src="images/img-slide-3.jpg" alt="" class="img" />
+        </div>
+        <div class="box-img">
+          <img src="images/img-slide-4.jpg" alt="" class="img" />
+        </div>
+        <div class="box-img">
+          <img src="images/img-slide-5.jpg" alt="" class="img" />
+        </div>
+        <div class="ctrl-box">
+          <button class="btn prev-slide">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button class="btn next-slide">
+            <i class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="ctrl-bults"></div>
+      </div>
+    </section>
 
-      <footer class="footer">
-        &copy;copyright 2021 by <span>Momen Nasser</span>
-      </footer>
-    </div>
+    <main class="my-m" id="main"></main>
+
+    <footer class="footer">
+      &copy;copyright 2021 by <span>Momen Nasser</span>
+    </footer>
+    <!-- </div> -->
 
     <script type="module" src="src/index.js"></script>
   </body>

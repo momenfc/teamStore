@@ -18,22 +18,8 @@ export const rerender = async (component) => {
 };
 
 export const setCartBtnNavi = () => {
-  document.querySelector(
-    ".cart-btn__navigation"
-  ).innerHTML = getCartItems().length;
-};
-
-export const slidShow = () => {
-  const slider = document.querySelector(".slider"),
-    containerGrid = document.querySelector(".container-grid");
-
-  if (parseRequestUrl().resorce == "") {
-    slider.classList.add("active");
-    containerGrid.style.gridTemplateRows = "6rem min-content 1fr min-content";
-  } else {
-    slider.classList.remove("active");
-    containerGrid.style.gridTemplateRows = "6rem 1fr min-content";
-  }
+  document.querySelector(".cart-btn__navigation").innerHTML =
+    getCartItems().length;
 };
 
 export const showLoading = () => {

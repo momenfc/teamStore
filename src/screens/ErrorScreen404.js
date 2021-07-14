@@ -1,10 +1,8 @@
 const ErrorScreen404 = {
   after_render: () => {
     const navbar = document.querySelector(".navbar"),
-      // slider = document.querySelector(".slider"),
       footer = document.querySelector(".footer");
     navbar.style.display = "none";
-    // slider.style.display = "none";
     footer.style.display = "none";
   },
 
